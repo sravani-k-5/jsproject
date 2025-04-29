@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal {
+    background: #fff;
+    padding: 2rem;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .tab-switch {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-switch button {
+    flex: 1;
+    padding: 0.5rem;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .tab-switch button.active {
+    background-color: #4285f4;
+    color: white;
+  }
+  
+  .form {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .form.active {
+    display: flex;
+  }
+  
+  .form input {
+    margin: 0.5rem 0;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    margin-top: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .captcha-placeholder {
+    margin-top: 0.8rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+    border-radius: 4px;
+  }
+  
+  .forgot {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: #3366cc;
+    text-decoration: none;
+  }
+  

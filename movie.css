@@ -1,0 +1,107 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+/* Header Styles */
+.nav-bar {
+    display: flex;
+    justify-content: space-between; /* Aligns image and button */
+    align-items: center;
+    padding: 5px 10px; /* Reduced padding */
+    background-color: #333; /* Dark background */
+    color: #000; /* White text */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
+
+/* Logo Image Styling */
+#logo img {
+    width: 50px; /* Adjusted logo size */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Header Button Styling */
+#fav {
+    padding: 5px 10px; /* Reduced padding */
+    background-color: #fc7703; /* Blue button */
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em; /* Slightly smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#fav:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Content Styling */
+.container {
+    margin-top: 20px; /* Space between header and content */
+    padding: 0 20px;
+}
+
+/* Result Grid Styling */
+.result-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Space between image and content */
+} 
+
+/* Movie Poster Styling */
+.movie-poster img {
+    width: 150px; /* Adjusted image size */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Movie Info Styling */
+.movie-info {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie Title Styling */
+.movie-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Movie Misc Info Styling */
+.movie-misc-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.movie-misc-info li {
+    font-size: 0.9em;
+}
+
+/* Movie Description Styling */
+.movie-description {
+    margin-top: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+#addToFav{
+    background-color: #d3eb34;
+    padding: 5px;
+    border-radius: 10px;
+}

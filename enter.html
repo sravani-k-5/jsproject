@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light background for better visibility */
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-container a img {
+            width: 100px; /* Increased size for the icon */
+            height: 100px; /* Increased size to match width */
+            border-radius: 50%; /* Make the image circular */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        }
+
+        .icon-container a img:hover {
+            transform: scale(2.9); /* Slightly enlarge the icon on hover */
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Intensify the shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <a href="login.html">
+            <img src="enter.jpg" alt="Enter">
+        </a>
+    </div>
+</body>
+</html>
