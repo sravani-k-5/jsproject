@@ -5,6 +5,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 html, body {
+  width: 100%; 
   overflow-x: hidden; 
 }
 a {
@@ -120,6 +121,25 @@ img {
   color: goldenrod;
   animation: scroll-line 15s linear infinite; 
 }
+#start {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  background-color: #e8d934;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 6px 3px 18px 2px red;
+}
+
+
 @keyframes scroll-line {
   0% {
     left: 100%; 
@@ -189,6 +209,79 @@ cursor: pointer;
 background-color: grey;
 }
 
+.outer-container {
+  max-width: 100%; 
+  overflow-x: hidden; 
+
+.container {
+  max-width: 100%; 
+}
+
+
+.component-class {
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.news-section {
+  display: flex; /* Use flex layout */
+  flex-wrap: wrap; /* Allow wrapping of news cards */
+  gap: 20px; /* Add spacing between news cards */
+  justify-content: space-between; /* Distribute cards evenly */
+  padding: 20px; /* Add padding around the section */
+}
+
+.news-card {
+  flex: 1 1 calc(33.33% - 20px); /* Ensure three cards per row */
+  max-width: calc(33.33% - 20px); /* Limit maximum width */
+  background: #111; /* Add background color for better visibility */
+  border-radius: 10px; /* Add rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.news-card img {
+  width: 100%; /* Ensure images take full width of the card */
+  height: 200px; /* Maximize height for larger images */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.news-content {
+  padding: 10px; /* Add padding inside the card */
+  text-align: center; /* Center align text */
+}
+
+.news-content h4 {
+  font-size: 1.2rem; /* Adjust font size */
+  margin: 0 0 6px; /* Add spacing below the title */
+}
+
+.news-content .meta {
+  font-size: 0.9rem; /* Adjust font size for metadata */
+  color: #aaa; /* Set a lighter color for metadata */
+}
+
+@media screen and (max-width: 768px) {
+  .news-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to two cards per row */
+    max-width: calc(50% - 20px); /* Limit maximum width */
+  }
+
+  .news-card img {
+    height: 150px; /* Adjust height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news-card {
+    flex: 1 1 100%; /* Adjust to one card per row */
+    max-width: 100%; /* Ensure full width */
+  }
+
+  .news-card img {
+    height: 120px; /* Further adjust height for very small screens */
+  }
+}
 
 @media screen and (max-width: 320px) {
   body {
@@ -248,7 +341,8 @@ background-color: grey;
     box-shadow: 4px 2px 10px 1px red; 
     text-align: center; 
     margin-left: 150px;
-    margin-top: -30px;
+    margin-top: -90px;
    }  
 }
 
+}

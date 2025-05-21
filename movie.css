@@ -1,107 +1,137 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-body {
+  }
+  
+  body {
     background-color: #000;
-}
-
-/* Header Styles */
-.nav-bar {
-    display: flex;
-    justify-content: space-between; /* Aligns image and button */
-    align-items: center;
-    padding: 5px 10px; /* Reduced padding */
-    background-color: #333; /* Dark background */
-    color: #000; /* White text */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow */
-}
-
-/* Logo Image Styling */
-#logo img {
-    width: 50px; /* Adjusted logo size */
-    height: auto;
-    border-radius: 4px;
-}
-
-/* Header Button Styling */
-#fav {
-    padding: 5px 10px; /* Reduced padding */
-    background-color: #fc7703; /* Blue button */
     color: #fff;
+  }
+  
+  /* Navigation Bar */
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo Styling */
+  
+  
+  .back-button {
+    font-size: 1rem;
+    color: #ff0040;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+  }
+  
+  /* Content Container */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; 
+    padding: 20px;
+  }
+  
+  
+  /* Movie Detail Grid */
+  .result-grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; 
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  
+  /* Poster Styling */
+  .movie-poster img {
+    width: 250px;
+    border-radius: 8px;
+  }
+  
+  /* Movie Info Section */
+  .movie-info {
+    max-width: 800px;
+  }
+  
+  /* Title and Tagline */
+  .movie-title {
+    color: deeppink;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    color: #a186f7;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  /* Misc Info: Duration, Release, Rating */
+  .movie-misc-info {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+  
+  .movie-misc-info li {
+    list-style: none;
+  }
+  
+  .movie-misc-info li i {
+    margin-right: 5px;
+    color: #5de0ff;
+  }
+  
+  /* Description */
+  .movie-description {
+    color: #ffeccc;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
+  /* Add to Favorites Button */
+  #addToFav {
+    background-color: #d3eb34;
+    color: black;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 40px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #addToFav:hover {
+    background-color: #c6db25;
+  }
+  #fav {
+    padding: 5px 10px;
+    background-color: yellow; 
     border: none;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 0.9em; /* Slightly smaller font size */
+    font-size: 0.9em; 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #fav:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: orange; 
 }
-
-/* Content Styling */
-.container {
-    margin-top: 20px; /* Space between header and content */
-    padding: 0 20px;
-}
-
-/* Result Grid Styling */
-.result-grid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px; /* Space between image and content */
-} 
-
-/* Movie Poster Styling */
-.movie-poster img {
-    width: 150px; /* Adjusted image size */
-    height: auto;
-    border-radius: 4px;
-}
-
-/* Movie Info Styling */
-.movie-info {
-    flex: 1;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Movie Title Styling */
-.movie-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* Movie Misc Info Styling */
-.movie-misc-info {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.movie-misc-info li {
-    font-size: 0.9em;
-}
-
-/* Movie Description Styling */
-.movie-description {
-    margin-top: 10px;
-    font-size: 1em;
-    line-height: 1.5;
-}
-#addToFav{
-    background-color: #d3eb34;
-    padding: 5px;
-    border-radius: 10px;
-}
+  

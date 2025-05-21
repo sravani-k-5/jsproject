@@ -1,288 +1,249 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Ensure this link is correct -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="main.css">
-  <title>Main Page</title>
-</head>
-<body>
-  <div class="nav-bar">
-    <div id="logo">
-      <a href="index.html">
-        <img src="imdb.png" alt="IMDb Logo" />
-      </a>
-    </div>
-    <div class="search-element">
-      <div class="search-box">
-        <input type="text" placeholder="Enter Movie Title..." class="form-control" id="movie-search-box">
-        <button class="search-btn" id="search-btn"><i class="fas fa-search"></i></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Main Page</title>
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="asserts/ChatGPT Image May 1, 2025, 12_41_46 PM.png" alt="IMDb Logo" width="80px"/></a>
       </div>
+      <div class="search">
+        <input type="text" placeholder="Enter Movie Title..." id="movie-search-box">
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
       <div class="search-list" id="search-list"></div>
-      <div class="right-buttons">
-        <a href="favpage.html" id="favorite">Favourites</a>
-        <a href="week.html" id="tope">Top</a>
+
+        <div class="navbar-button-left" id="desktopButtons">
+          <a href="favpage.html" id="favorite">Favourites</a>
+        </div> 
+
+        <div class="menu-items" id="menu">
+          <a href="favpage.html">Favourites</a>
+        </div>
+    </nav>
+
+    
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="kanguva.jpeg" alt="Kanguva" height="900px" />
+        </div>
       </div>
     </div>
-  </div> 
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <div class="carousel-item">
-        <img src="kanguva.jpeg" alt="Kanguva">
+
+
+    <div class="section-heading">
+      <h2>Top picks <span>&#x2794;</span></h2>
+      <p>TV shows and movies just for you</p>
+    </div>
+    <div class="cardown">
+      <div class="card">
+        <img src="aaa.jpeg" alt="AAA" class="card-image" />
+        <p class="movie-name">AAA</p>
+        <p class="movie-rating">Rating: 8.5</p>
       </div>
-      <div class="carousel-item">
-        <img src="atharva.jpeg" alt="Atharva">
+      <div class="card">
+        <img src="airaa.jpeg" alt="Airaa" class="card-image" />
+        <p class="movie-name">Airaa</p>
+        <p class="movie-rating">Rating: 7.8</p>
       </div>
-      <div class="carousel-item">
-        <img src="vijay.jpeg" alt="Vijay">
+      <div class="card">
+        <img src="devara.jpeg" alt="Devara" class="card-image" />
+        <p class="movie-name">Devara</p>
+        <p class="movie-rating">Rating: 9.0</p>
       </div>
-      <div class="carousel-item">
-        <img src="avengers.jpeg" alt="Avengers">
+      <div class="card">
+        <img src="high.jpeg" alt="High" class="card-image" />
+        <p class="movie-name">High</p>
+        <p class="movie-rating">Rating: 8.2</p>
+      </div>
+      <div class="card">
+        <img src="hit.jpeg" alt="Hit" class="card-image" />
+        <p class="movie-name">Hit</p>
+        <p class="movie-rating">Rating: 8.0</p>
+      </div>
+      <div class="card">
+        <img src="love.jpeg" alt="Love" class="card-image" />
+        <p class="movie-name">Love</p>
+        <p class="movie-rating">Rating: 7.5</p>
       </div>
     </div>
-    <div class="carousel-controls">
-      <button class="carousel-button" id="prev-btn">&#10094;</button>
-      <button class="carousel-button" id="next-btn">&#10095;</button>
-    </div>
-  </div>
-  <div class="section-heading">
-    <h2>Top picks <span>&#x2794;</span></h2>
-    <p>TV shows and movies just for you</p>
-  </div>  
-  <div class="cardown">
-    <div class="card">
-      <button class="add-watchlist-btn" data-id="1">+</button>
-      <img src="aaa.jpeg" alt="AAA" class="card-image">
-      <p class="movie-name">AAA</p>
-      <p class="movie-rating">Rating: 8.5</p>
-    </div>
-    <div class="card">
-      <button class="add-watchlist-btn" data-id="2">+</button>
-      <img src="airaa.jpeg" alt="Airaa" class="card-image">
-      <p class="movie-name">Airaa</p>
-      <p class="movie-rating">Rating: 7.8</p>
-    </div>
-    <div class="card">
-      <button class="add-watchlist-btn" data-id="3">+</button>
-      <img src="devara.jpeg" alt="Devara" class="card-image">
-      <p class="movie-name">Devara</p>
-      <p class="movie-rating">Rating: 9.0</p>
-    </div>
-    <div class="card">
-      <button class="add-watchlist-btn" data-id="4">+</button>
-      <img src="high.jpeg" alt="High" class="card-image">
-      <p class="movie-name">High</p>
-      <p class="movie-rating">Rating: 8.2</p>
-    </div>
-    <div class="card">
-      <button class="add-watchlist-btn" data-id="5">+</button>
-      <img src="hit.jpeg" alt="Hit" class="card-image">
-      <p class="movie-name">Hit</p>
-      <p class="movie-rating">Rating: 8.0</p>
-    </div>
-    <div class="card">
-      <button class="add-watchlist-btn" data-id="6">+</button>
-      <img src="love.jpeg" alt="Love" class="card-image">
-      <p class="movie-name">Love</p>
-      <p class="movie-rating">Rating: 7.5</p>
-    </div>
-  </div>
-  <div class="section-title">
-    Most popular celebrities <span>➤</span>
-  </div>
+    <div class="section-title">Most popular celebrities <span class="span">➤</span></div>
 
-  <div class="sub-titles">
-    <div>Top Rising</div>
-    <!-- <div>By Ranking</div> -->
-  </div>
-
-  <div class="celebrity-list">
-    <div class="celebrity">
-      <img src="priya.jpeg" alt="Shruthi" />
-      <div class="rank">7 <span>(▲744)</span></div>
-      <div class="name">Priyanka chopra</div>
+    <div class="sub-titles">
+      <div>Top Rising</div> 
     </div>
 
-    <div class="celebrity">
-      <img src="rajini.jpeg" alt="Rajini" />
-      <div class="rank">44 <span>(▲657)</span></div>
-      <div class="name">Rajini kanth</div>
+    <div class="celebrity-list">
+      <div class="celebrity">
+        <img src="priya.jpeg" alt="Shruthi" />
+        <div class="rank">7 <span>(▲744)</span></div>
+        <div class="name">Priyanka chopra</div>
+      </div>
+
+      <div class="celebrity">
+        <img src="rajini.jpeg" alt="Rajini" />
+        <div class="rank">44 <span>(▲657)</span></div>
+        <div class="name">Rajini kanth</div>
+      </div>
+
+      <div class="celebrity">
+        <img src="sharu.jpeg" alt="Venu" />
+        <div class="rank">1 <span>(▲115)</span></div>
+        <div class="name">Sharukhan</div>
+      </div>
+
+      <div class="celebrity">
+        <img src="thala.jpeg" alt="Karhi" />
+        <div class="rank">2 <span>(▲94)</span></div>
+        <div class="name">Vijay Thalapathy</div>
+      </div>
+
+      <div class="celebrity">
+        <img src="vidhush.jpeg" alt="Chava" />
+        <div class="rank">3 <span>(▲18)</span></div>
+        <div class="name">Vidhush</div>
+      </div>
+
+      <div class="celebrity">
+        <img src="surya.jpeg" alt="Parthi" />
+        <div class="rank">4 <span>(▲71)</span></div>
+        <div class="name">Surya</div>
+      </div>
+
     </div>
 
-    <div class="celebrity">
-      <img src="sharu.jpeg" alt="Venu" />
-      <div class="rank">1 <span>(▲115)</span></div>
-      <div class="name">Sharukhan</div>
-    </div>
+    <section class="news-section">
+      <div class="news-header">
+        <h2><span class="highlight"></span> Top News</h2>
+      </div>
 
-    <div class="celebrity">
-      <img src="thala.jpeg" alt="Karhi" />
-      <div class="rank">2 <span>(▲94)</span></div>
-      <div class="name">Vijay Thalapathy</div>
-    </div>
+      <div class="news-container">
+        
+          <div class="news-card">
+            <img src="john.jpeg" alt="News 1" />
+            <div class="news-content">
+              <h4>Jonestown Drama From Bill Hader...</h4>
+              <p class="meta">Apr 23 · The Hollywood Reporter</p>
+            </div>
+          </div>
 
-    <div class="celebrity">
-      <img src="vidhush.jpeg" alt="Chava" />
-      <div class="rank">3 <span>(▲18)</span></div>
-      <div class="name">Vidhush</div>
-    </div>
+          
+          <div class="news-card">
+            <img src="wed.jpeg" alt="News 2" />
+            <div class="news-content">
+              <h4>‘Wednesday’ Season 2 Sets 2-Part Netflix Premiere</h4>
+              <p class="meta">Apr 23 · The Wrap</p>
+            </div>
+          </div>
 
-    <div class="celebrity">
-      <img src="surya.jpeg" alt="Parthi" />
-      <div class="rank">4 <span>(▲71)</span></div>
-      <div class="name">Surya</div>
-    </div>
+          
+          <div class="news-card">
+            <img src="enemy.jpeg" alt="News 3" />
+            <div class="news-content">
+              <h4>Screen Actors Guild Awards Set March 2026 Air Date</h4>
+              <p class="meta">Apr 22 · The Wrap</p>
+            </div>
+          </div>
 
-    <div class="arrow">›</div>
-  </div>
-
-  <!-- Top News Section -->
-  <section class="news-section">
-    <div class="news-header">
-      <h2><span class="highlight"></span> Top News</h2>
-    </div>
-
-    <div class="news-container">
-      <div class="news-slider" id="slider">
-        <!-- Card 1 -->
-        <div class="news-card">
-          <img src="john.jpeg" alt="News 1" />
-          <div class="news-content">
-            <h4>Jonestown Drama From Bill Hader...</h4>
-            <p class="meta">Apr 23 · The Hollywood Reporter</p>
+          <div class="news-card">
+            <img src="Godzilla20Kong.webp" alt="News 3" />
+            <div class="news-content">
+              <h4>Screen Actors Guild Awards Set March 2026 Air Date</h4>
+              <p class="meta">Apr 22 · The Wrap</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="Godzilla20Kong.webp" alt="News 3" />
+            <div class="news-content">
+              <h4>Screen Actors Guild Awards Set March 2026 Air Date</h4>
+              <p class="meta">Apr 22 · The Wrap</p>
+            </div>
+          </div>
+          <div class="news-card">
+            <img src="Godzilla20Kong.webp" alt="News 3" />
+            <div class="news-content">
+              <h4>Screen Actors Guild Awards Set March 2026 Air Date</h4>
+              <p class="meta">Apr 22 · The Wrap</p>
+            </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="news-card">
-          <img src="wed.jpeg" alt="News 2" />
-          <div class="news-content">
-            <h4>‘Wednesday’ Season 2 Sets 2-Part Netflix Premiere</h4>
-            <p class="meta">Apr 23 · The Wrap</p>
+      </div>
+
+      <div class="category-tags">
+        <button>Top News</button>
+        <button>Movie News</button>
+        <button>TV News</button>
+        <button>Celebrity News</button>
+      </div>
+    </section>
+
+    <footer class="imdb-footer">
+      <div class="footer-top">
+        <div class="social-box">
+          <h3>Follow IMDb on social</h3>
+          <div class="icons">
+            <img src="./asserts/tiktok.png" alt="tiktok logo" />
+            <img src="./asserts/facebook.png" alt="facebook logo" />
+            <img src="./asserts/instagram-logo.png" alt="instagram-logo" />
+            <img src="./asserts/youtube-symbol.png" alt="youtube-symbol" />
+            <img src="./asserts/whatsapp-logo.png" alt="whatsapp-logo" />
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="news-card">
-          <img src="enemy.jpeg" alt="News 3" />
-          <div class="news-content">
-            <h4>Screen Actors Guild Awards Set March 2026 Air Date</h4>
-            <p class="meta">Apr 22 · The Wrap</p>
-          </div>
-        </div>
+        
       </div>
 
-      <button class="arrow-btn" onclick="scrollRight()">❯</button>
-    </div>
-
-    <div class="category-tags">
-      <button>Top News</button>
-      <button>Movie News</button>
-      <button>TV News</button>
-      <button>Celebrity News</button>
-    </div>
-  </section>
-
-  <footer class="imdb-footer">
-    <div class="footer-top">
-      <div class="social-box">
-        <h3>Follow IMDb on social</h3>
-        <div class="icons">
-          <img src="./asserts/tiktok.png" alt="tiktok logo"/>
-          <!-- <i class="fa-tiktok"></i> Corrected class for TikTok -->
-          <img src="./asserts/facebook.png" alt="facebook logo"/>
-          <img src="./asserts/instagram-logo.png" alt="instagram-logo"/>
-          <img src="./asserts/youtube-symbol.png" alt="youtube-symbol"/>
-          <img src="./asserts/whatsapp-logo.png" alt="whatsapp-logo"/>
-        </div>
+      <div class="footer-links">
+        <a href="#">Help</a>
+        <a href="#">Site Index</a>
+        <a href="#">IMDbPro</a>
+        <a href="#">Box Office Mojo</a>
+        <a href="#">License IMDb Data</a>
+        <a href="#">Press Room</a>
+        <a href="#">Advertising</a>
+        <a href="#">Jobs</a>
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Your Ads Privacy Choices</a>
       </div>
 
-      <div class="app-box">
-        <h3>Get the IMDb app</h3>
-        <p>For Android and iOS</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.imdb.com/app" alt="QR Code">
+      <div class="amazon-company">
+        <p>an <span>amazon</span> company</p>
       </div>
-    </div>
 
-    <div class="footer-links">
-      <a href="#">Help</a>
-      <a href="#">Site Index</a>
-      <a href="#">IMDbPro</a>
-      <a href="#">Box Office Mojo</a>
-      <a href="#">License IMDb Data</a>
-      <a href="#">Press Room</a>
-      <a href="#">Advertising</a>
-      <a href="#">Jobs</a>
-      <a href="#">Conditions of Use</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Your Ads Privacy Choices</a>
-    </div>
+      <div class="copyright">
+        <p>© 1990-2025 by IMDb.com, Inc.</p>
+      </div>
+    </footer>
 
-    <div class="amazon-company">
-      <p>an <span>amazon</span> company</p>
-    </div>
+    <script>
+     
 
-    <div class="copyright">
-      <p>© 1990-2025 by IMDb.com, Inc.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Carousel functionality
-    const track = document.querySelector('.carousel-track');
-    const prevButton = document.getElementById('prev-btn');
-    const nextButton = document.getElementById('next-btn');
-    const items = document.querySelectorAll('.carousel-item');
-    const itemWidth = items[0].getBoundingClientRect().width;
-
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-    }
-
-    function showNextSlide() {
-      currentIndex = (currentIndex + 1) % items.length; // Loop back to the first slide
-      updateCarousel();
-    }
-
-    // Automatically scroll the carousel every 3 seconds
-    let autoSlideInterval = setInterval(showNextSlide, 3000);
-
-    prevButton.addEventListener('click', () => {
-      clearInterval(autoSlideInterval); // Stop auto-slide on manual interaction
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-      autoSlideInterval = setInterval(showNextSlide, 3000); // Restart auto-slide
-    });
-
-    nextButton.addEventListener('click', () => {
-      clearInterval(autoSlideInterval); // Stop auto-slide on manual interaction
-      if (currentIndex < items.length - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-      autoSlideInterval = setInterval(showNextSlide, 3000); // Restart auto-slide
-    });
-
-
-
-
-
-    const searchBox = document.querySelector("#movie-search-box");
+const searchBox = document.querySelector("#movie-search-box");
 const searchList = document.querySelector("#search-list");
 
-// Set default data to local storage
 if (!localStorage.getItem("favMovies")) {
     localStorage.setItem("favMovies", JSON.stringify([]));
 }
 
-// Find movies for the user
 const findMovies = () => {
     let searchTerm = searchBox.value.trim();
     if (searchTerm.length > 0) {
@@ -293,7 +254,6 @@ const findMovies = () => {
     }
 };
 
-// Fetching movies from OMDB API
 async function fetchMovies(searchTerm) {
     const URL = `http://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=b2b1bcd6`;
     const res = await fetch(URL);
@@ -304,7 +264,6 @@ async function fetchMovies(searchTerm) {
     }
 }
 
-// Displaying matched movies in the suggestions box
 const displayMoviesList = (movies) => {
     searchList.innerHTML = "";
     movies.forEach((movie) => {
@@ -327,7 +286,6 @@ const displayMoviesList = (movies) => {
     loadMovieDetails();
 };
 
-// Loading movie details
 const loadMovieDetails = () => {
     const searchListMovies = searchList.querySelectorAll(".search-list-item");
     searchListMovies.forEach((movie) => {
@@ -340,7 +298,6 @@ const loadMovieDetails = () => {
     });
 };
 
-// Adding Event Listeners to different elements
 window.addEventListener("click", (e) => {
     if (e.target.className !== "form-control") {
         searchList.classList.add("hide-search-list");
@@ -353,7 +310,7 @@ searchBox.addEventListener("click", findMovies);
 
 function scrollRight() {
   const slider = document.getElementById("slider");
-  slider.scrollLeft += 300; // Scroll by 300px to the right
+  slider.scrollLeft += 300; 
 }
 
 function toggleMenu() {
@@ -361,6 +318,12 @@ function toggleMenu() {
   rightButtons.classList.toggle('show');
 }
 
-  </script>
-</body>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+
+    </script>
+  </body>
 </html>
