@@ -3,6 +3,7 @@ const resultContainer = document.querySelector(".result-container");
 // Function to fetch movies from the server
 async function getData() {
     const url = 'https://imdb188.p.rapidapi.com/api/v1/getWeekTop10';
+    
     const options = {
         method: 'GET',
         headers: {

@@ -513,6 +513,8 @@ nav{
   padding: 10px;
   border: 1px solid #ccc;
   z-index: 1000;
+
+  
 }
   @media screen and (max-width: 768px) {
     
